@@ -31,7 +31,7 @@ userrouter.post("/users/register", async (req, res) => {
           age,
         });
         data.save();
-        res.send("data registered successfully");
+        res.send({ msg: "data registered successfully" });
       }
     });
   }
