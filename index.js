@@ -8,9 +8,13 @@ const { productrouter } = require("./routes/productroutes.js");
 
 const { cartrouter } = require("./routes/cartroutes.js");
 
+const cors = require("cors");
+
 require("dotenv").config();
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
