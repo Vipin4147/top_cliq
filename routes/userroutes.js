@@ -6,6 +6,10 @@ const bcrypt = require("bcrypt");
 
 const userrouter = express.Router();
 
+const cors = require("cors");
+
+userrouter.use(cors());
+
 const { UserModel } = require("../model/usermodel");
 
 userrouter.post("/users/register", async (req, res) => {

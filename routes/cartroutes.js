@@ -8,6 +8,10 @@ const { authenticate } = require("../middleware/authenticate.js");
 
 cartrouter.use(authenticate);
 
+const cors = require("cors");
+
+cartrouter.use(cors());
+
 cartrouter.get("/carts", async (req, res) => {
   const { query } = req.query;
 

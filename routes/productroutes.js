@@ -6,6 +6,10 @@ const productrouter = express.Router();
 
 const { authenticate } = require("../middleware/authenticate.js");
 
+const cors = require("cors");
+
+productrouter.use(cors());
+
 productrouter.use(authenticate);
 
 productrouter.get("/products", async (req, res) => {
